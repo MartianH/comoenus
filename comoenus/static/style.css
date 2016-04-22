@@ -1,0 +1,242 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700,400,400italic,300,300italic);
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+	font-size: 12px;
+}
+
+aside {
+	float: right;
+}
+
+header {
+	padding-left: 1em;
+}
+header h1 {
+	font-size: 3em !important;
+}
+
+h1 {
+	font-size: 4em !important; 
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+	color: #B70004;
+}
+
+.demarginalize {
+	margin: 0;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+.post {
+	height: 4em;
+	width: 35em;
+	margin-bottom: 0.4em;
+}
+.title {
+	font-size: 2em;
+	font-weight: bold;
+}
+.a-text a{
+	color: black;
+}
+.a-text a:hover{
+	color: #272424;
+}
+.submission-btn {
+	background: none;
+	background-color: #2D2D2D;
+	border: none;
+	border-radius: 0.6em;
+	color: white;
+	height: 2em;
+	width: 8em;
+}
+.submission-btn:hover {
+	background-color: #3F3F3F;
+}
+.submission-input {
+	padding-left: 0.1em;
+	margin: 0.2em 0em;
+	width: 90%;
+	border: none;
+}
+.form-input {
+	padding-left: 0.1em;
+	margin: 0.2em 0em;
+	width: 10em;
+	border: solid #7F7F7F 0.1em;
+	border-radius: 0.5em;
+	font-size: 1.1em;
+}
+.form-input:focus {
+	outline: none;
+	border-color: #656565;
+}
+.form-btn {
+	padding: 0.1em 0.7em;
+	background: none;
+	border: solid black 0.1em;
+	border-radius: 0.6em;
+	color: black;
+	font-weight: bold;
+	-webkit-transition: ease 300ms all;
+	-o-transition: ease 300ms all;
+	transition: ease 300ms all;
+}
+.form-btn:hover {
+	border-color: #CCC;
+	color: #CCC;
+}
+.meta-username {
+	background-color: black;
+	width: 5.3em;
+	color: white;
+	font-weight: 400;
+	font-size: 1.1em;
+	padding: 0.1em 0.4em 0.15em 0.3em;
+	border-radius: 1em;
+}
+.meta-username a {
+	color: inherit;
+}
+.meta-timestamp {
+	font-style: italic;
+	color: red;
+}
+.submission-input:focus {
+	outline:none;
+}
+.slim-title {
+	font-weight: lighter;
+	font-style: italic;
+}
+.vote {
+	background-size: contain;
+	width: 1.5em;
+	height: 1.5em;
+	margin: auto;
+	cursor: pointer;
+}
+	.plus {
+		background-image: url('/static/plus.svg');
+		margin-bottom: 0.2em;
+	}
+	.plus:hover, .plusMod {
+		background-image: url('/static/plus2.svg');
+	}
+	.minus {
+		background-image: url('/static/minus.svg');
+		margin-top: 0.2em;
+	}
+	.minus:hover, .minusMod {
+		background-image: url('/static/minus2.svg');
+		margin-top: 0.2em;
+	}
+#err-text {
+	color: #B40C00;
+	display: none;
+}
+#inner-wrap {
+	margin-left: 0.5em;
+}
+#input-area {
+	min-height: 20em;
+	font-size: 1.3em;
+}
+#input-title {
+	border-left: solid black 0.1em;
+	font-size: 3em;
+	-webkit-transition: ease all 300ms;
+	-o-transition: ease all 300ms;
+	transition: ease all 300ms;
+}
+#login-a, #signup-a {
+	padding-right: 0.2em;
+	cursor: pointer;
+}
+#login-form {
+	display: none;
+}
+#logout-btn {
+	border-left: solid black 0.2em;
+	font-weight: 300;
+	font-style: italic;
+}
+#post-vote {
+	float: left;
+	width: 1.8em;
+	height: 3.7em;
+	margin: auto;
+	margin-top: 0.3em;
+	margin-right: 0.4em;
+}
+#post-cont {
+	float: left;
+	width: 30em;
+}
+#signup-a:before {
+	content: '- ';
+	color: black;
+}
+#submit-btn {
+	padding: 0em 0.5em;
+	margin-right: 0.5em;
+	color: white;
+	background-color: black;
+	border-radius: 0.2em;
+}
+#form-submit-btn {
+	display: none;
+}
+#submit-btn {
+	padding: 0.2em 0.5em;
+	margin-right: 0.5em;
+	color: white;
+	background-color: black;
+	border-radius: 0.2em;
+}
+#text {
+	margin-left: 0.2em;
+	font-size: 1.3em;
+}
+
+#comment-cont {
+	border-top: 0.15em solid black;
+	margin-top: 2em;
+}
+ #comment-cont h2 {
+	background-color: black;
+	width: 5.3em;
+	color: white;
+	font-weight: 400;
+	font-size: 1.7em;
+	padding: 0 0.15em;
+ }
+#content-wrapper {
+	width: 83.3em;
+	margin: 5em auto;
+}
+#userbar {
+	min-height: 10em;
+	width: 23em;
+}
+#userposts {
+	width: 60em;
+	float: left;
+}
+#userspace {
+	display: inline;
+	float: right;
+	margin-right: 1em;
+	margin-top: -2.4em;
+}
+#userspace a{
+	font-size: 1.2em;
+	font-weight: bold;
+}

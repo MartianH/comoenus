@@ -1,0 +1,8 @@
+extends ./base.jade
+block content
+	form(method="post", id="submit-cont")
+		input(type="text", placeholder="Title", id="input-title", class="submission-input", name="title", autofocus)
+		div#inner-wrap
+			textarea(id="input-area", class="submission-input", placeholder="Express your thoughts...", name="text")
+			p(id='word-count')
+			input(type="submit", value="Publish", class="submission-btn", id="form-submit-btn")

@@ -12,5 +12,6 @@ setup(
                     'mysql-python==1.2.5',
                     'pyjade==4.0.0',
                     'python-slugify==1.2.0'
+                    'behave'
                     ]
 )

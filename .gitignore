@@ -1,0 +1,21 @@
+*~
+*.py[co]
+*.DS_*
+# Packages
+*.egg
+*.egg-info
+*.db
+dist
+build
+eggs
+sdist
+develop-eggs
+
+
+
+#Mr Developer
+venv
+flaskenv
+env
+*.pyc
+

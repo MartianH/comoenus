@@ -1,4 +1,4 @@
-from flask import request, session, jsonify, abort
+from flask import request, session, jsonify, abort, make_response
 from comoenus import app, flask_bcrypt as b, db, rest_api
 from comoenus.model import User, Submission, Votes
 from slugify import slugify
@@ -24,24 +24,30 @@ def api_submissions_thumb():
 
 @rest_api.route('/user_submissions_thumb/<username>')
 def api_user_submissions_thumb(username):
+    status_code = None
     user = User.query.filter(
         User.username == username
     ).first()
-    submissions = Submission.query.filter(
-        Submission.user_id == user.id
-    ).order_by(Submission.date.desc())
-    result = []
-    for submission in submissions:
-        result.append({
-            'id': submission.id,
-            'title': submission.title,
-            'slug': slugify(submission.title),
-            'id_string': submission.id_string,
-            'user': str(submission.user),
-            'timestamp': time_ago(submission.date)
-        })
+    if user is not None:
+        submissions = Submission.query.filter(
+            Submission.user_id == user.id
+        ).order_by(Submission.date.desc())
+        result = []
+        for submission in submissions:
+            result.append({
+                'id': submission.id,
+                'title': submission.title,
+                'slug': slugify(submission.title),
+                'id_string': submission.id_string,
+                'user': str(submission.user),
+                'timestamp': time_ago(submission.date)
+            })
+        status_code = 200
+    
+    else:
+        abort(make_response(jsonify(error=["User does not exist"]), 404))
 
-    return jsonify(submissions=result)
+    return jsonify(submissions=result), status_code
 
 
 @rest_api.route('/sub_vote:<plus_minus>/<sub_id_string>:<username>', methods=['POST'])

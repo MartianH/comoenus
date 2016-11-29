@@ -1,17 +1,19 @@
-before_install:
-  - sudo apt-get install sqlite3 libsqlite3-dev python-dev python-dev libmysqlclient-dev
-language: python
-python:
-  - "2.6"
-  - "2.7"
-sudo: required
-install: 
-  - pip install -r requirements.txt
-  - python manage.py create_tables  
-
 os:
   - linux
   - osx
+language: python
+python:
+  - "2.7"
+sudo: required
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install sqlite3 libsqlite3-dev ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install python-dev python-dev  ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo brew update            ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo brew install sqlite3   ; fi
+
+install: 
+  - pip install -r requirements.txt
+  - python manage.py create_tables  
 
 env:
   - SH=bash

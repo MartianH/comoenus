@@ -9,6 +9,9 @@ def create_tables():
     import os
     message = ''
     try:
+        db_file = os.getcwd()+'/dev.db'
+        if not os.path.exists(db_file): 
+            open(db_file, 'a').close()
         db.drop_all()
         db.create_all()
         db.session.commit()

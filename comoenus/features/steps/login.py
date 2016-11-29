@@ -1,6 +1,9 @@
 from behave import *
 import requests
-from flask import app
+
+@given(u'App is running')
+def comoenus_is_running(context):
+    assert context.client
 
 @given(u'that user is in the database')
 def step_impl(context):

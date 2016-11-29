@@ -4,3 +4,7 @@ Feature: Login in user
       Given that user is in the database
       when user logs with username "dummy" and password "Password2016"
       then auth message should be "success"
+
+  Scenario: User gives wrong credentials
+      when user logs with username "dummy" and password "WrongPass"
+      then auth message should read "Wrong password..."

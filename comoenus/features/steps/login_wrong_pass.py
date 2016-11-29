@@ -8,6 +8,7 @@ Scenario 2
 
 User gives wrong password
 """
+
 @when(u'user logs with username "dummy" and password "WrongPass"')
 def step_impl(context):
     r = requests.post('http://localhost:5000/login', data={

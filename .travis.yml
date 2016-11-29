@@ -1,3 +1,5 @@
+before_install:
+  - sudo apt-get install sqlite3 libsqlite3-dev python2.7-dev
 language: python
 python:
   - "2.6"

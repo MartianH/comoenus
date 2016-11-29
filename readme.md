@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/MartianH/comoenus.svg?branch=master)](https://travis-ci.org/MartianH/comoenus)
+[![Build Status](https://travis-ci.org/MartianH/comoenus.svg?branch=master)](https://travis-ci.org/MartianH/comoenus/branches)
 
 Install & setup
 =====================

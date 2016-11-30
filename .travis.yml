@@ -12,5 +12,4 @@ install:
 
 env:
   - SH=bash
-
 script: behave comoenus/features
